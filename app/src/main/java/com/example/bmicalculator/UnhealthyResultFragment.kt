@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.example.bmicalculator.databinding.FragmentUnhealthyResultBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +22,7 @@ class UnhealthyResultFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var binding: FragmentUnhealthyResultBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +37,22 @@ class UnhealthyResultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_unhealthy_result, container, false)
+        binding = DataBindingUtil.inflate<FragmentUnhealthyResultBinding>(
+            inflater, R.layout.fragment_unhealthy_result, container, false
+        )
+        val args = UnhealthyResultFragmentArgs.fromBundle(requireArguments())
+
+        binding.labelGender.text = "Gender: " + args.gender
+        binding.labelAgeGroup.text = "Age Group: " + args.ageGroup
+        binding.labelBMI.text = "BMI: " + args.bmi
+        if(args.bmi < 18.5){
+            binding.labelCategory.text = "Category: " + "Under Weight"
+        }else if(args.bmi > 25 && args.bmi > 29){
+            binding.labelCategory.text = "Category: " + "Over Weight"
+        }else{
+            binding.labelCategory.text = "Category: " + "Obesity"
+        }
+        return binding.root
     }
 
     companion object {

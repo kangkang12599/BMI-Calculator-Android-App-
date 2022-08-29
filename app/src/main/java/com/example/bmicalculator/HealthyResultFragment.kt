@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.example.bmicalculator.databinding.FragmentHealthFormBinding
+import com.example.bmicalculator.databinding.FragmentHealthyResultBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,7 +23,7 @@ class HealthyResultFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
+    private lateinit var binding: FragmentHealthyResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,7 +37,17 @@ class HealthyResultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_healthy_result, container, false)
+        binding = DataBindingUtil.inflate<FragmentHealthyResultBinding>(
+            inflater, R.layout.fragment_healthy_result, container, false)
+
+        val args = HealthyResultFragmentArgs.fromBundle(requireArguments())
+
+        binding.labelGender.text = "Gender: " + args.gender
+        binding.labelAgeGroup.text = "Age Group: " + args.ageGroup
+        binding.labelBMI.text = "BMI: " + args.bmi
+        binding.labelCategory.text = "Category: " + "Normal Weight"
+
+        return binding.root
     }
 
     companion object {

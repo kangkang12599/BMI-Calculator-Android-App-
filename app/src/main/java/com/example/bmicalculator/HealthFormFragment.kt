@@ -11,6 +11,7 @@ import android.widget.*
 import androidx.core.view.isEmpty
 import androidx.databinding.BindingBuildInfo
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.bmicalculator.databinding.FragmentHealthFormBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -80,7 +81,7 @@ class HealthFormFragment : Fragment(), AdapterView.OnItemSelectedListener {
         // Another interface callback
     }
 
-    private fun submitButtonOnClickListener(view: View?){
+    private fun submitButtonOnClickListener(view: View){
         binding.apply {
             val selectedRadioButtonId: Int = radioGroupGender.checkedRadioButtonId
 
@@ -90,7 +91,7 @@ class HealthFormFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 editTextHeight.text.isEmpty() ||
                 editTextHeight.text.isEmpty()
             ){
-                Toast.makeText(view?.context, "Please fill in all the field", Toast.LENGTH_SHORT).show()
+                Toast.makeText(view.context, "Please fill in all the field", Toast.LENGTH_SHORT).show()
             }else{
                 selectedRadioButton = requireView().findViewById(selectedRadioButtonId)
                 BMIDetails?.gender = selectedRadioButton.text.toString()
@@ -98,7 +99,21 @@ class HealthFormFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 BMIDetails?.height = editTextHeight.text.toString().toDouble()
                 BMIDetails?.weight = editTextWeight.text.toString().toDouble()
                 val bmi = BMIDetails.weight!! / (BMIDetails.height!! / 100)
-                Toast.makeText(view?.context, "BMI: " + bmi.toString(), Toast.LENGTH_SHORT).show()
+                Toast.makeText(view.context, "BMI: " + bmi.toString(), Toast.LENGTH_SHORT).show()
+                val category: String
+                if(bmi > 18.5 && bmi < 24.9){
+                    category = "Normal Weight"
+                    view.findNavController().navigate(
+                        HealthFormFragmentDirections.actionHealthFormFragmentToHealthyResultFragment(
+                            BMIDetails.gender.toString(), BMIDetails.ageGroup.toString(), bmi.toFloat())
+                    )
+                }else{
+                    view.findNavController().navigate(
+                        HealthFormFragmentDirections.actionHealthFormFragmentToUnhealthyResultFragment(
+                            BMIDetails.gender.toString(), BMIDetails.ageGroup.toString(), bmi.toFloat()
+                        )
+                    )
+                }
             }
         }
     }

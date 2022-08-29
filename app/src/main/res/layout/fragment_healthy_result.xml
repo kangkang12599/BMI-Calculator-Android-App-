@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".HealthyResultFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imageHealthy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_mood_24" />
+
+        <TextView
+            android:id="@+id/labelGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/wide_margin"
+            style="@style/form_label_style"/>
+
+        <TextView
+            android:id="@+id/labelAgeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/wide_margin"
+            style="@style/form_label_style"/>
+
+        <TextView
+            android:id="@+id/labelBMI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/wide_margin"
+            style="@style/form_label_style"/>
+
+        <TextView
+            android:id="@+id/labelCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/wide_margin"
+            style="@style/form_label_style"/>
+
+    </LinearLayout>
+</layout>

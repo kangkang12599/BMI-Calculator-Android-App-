@@ -6,7 +6,13 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/fragment_health_form.xml" value="0.22" />
         <entry key="..\:/Users/user/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.1796875" />
+        <entry key="..\:/Users/user/Desktop/Mobile Application Development/Practical/BMICalculator/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.1785" />
+        <entry key="..\:/Users/user/Desktop/Mobile Application Development/Practical/BMICalculator/app/src/main/res/drawable/ic_baseline_mood_24.xml" value="0.135" />
+        <entry key="..\:/Users/user/Desktop/Mobile Application Development/Practical/BMICalculator/app/src/main/res/drawable/ic_baseline_mood_bad_24.xml" value="0.135" />
+        <entry key="..\:/Users/user/Desktop/Mobile Application Development/Practical/BMICalculator/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/Users/user/Desktop/Mobile Application Development/Practical/BMICalculator/app/src/main/res/layout/fragment_health_form.xml" value="0.22" />
+        <entry key="..\:/Users/user/Desktop/Mobile Application Development/Practical/BMICalculator/app/src/main/res/layout/fragment_healthy_result.xml" value="0.1796875" />
+        <entry key="..\:/Users/user/Desktop/Mobile Application Development/Practical/BMICalculator/app/src/main/res/layout/fragment_unhealthy_result.xml" value="0.1796875" />
       </map>
     </option>
   </component>

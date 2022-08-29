@@ -9,5 +9,42 @@
         android:id="@+id/healthFormFragment"
         android:name="com.example.bmicalculator.HealthFormFragment"
         android:label="fragment_health_form"
-        tools:layout="@layout/fragment_health_form" />
+        tools:layout="@layout/fragment_health_form" >
+        <action
+            android:id="@+id/action_healthFormFragment_to_healthyResultFragment"
+            app:destination="@id/healthyResultFragment" />
+        <action
+            android:id="@+id/action_healthFormFragment_to_unhealthyResultFragment"
+            app:destination="@id/unhealthyResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/healthyResultFragment"
+        android:name="com.example.bmicalculator.HealthyResultFragment"
+        android:label="fragment_healthy_result"
+        tools:layout="@layout/fragment_healthy_result" >
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="ageGroup"
+            app:argType="string" />
+        <argument
+            android:name="bmi"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/unhealthyResultFragment"
+        android:name="com.example.bmicalculator.UnhealthyResultFragment"
+        android:label="fragment_unhealthy_result"
+        tools:layout="@layout/fragment_unhealthy_result" >
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="ageGroup"
+            app:argType="string" />
+        <argument
+            android:name="bmi"
+            app:argType="float" />
+    </fragment>
 </navigation>
