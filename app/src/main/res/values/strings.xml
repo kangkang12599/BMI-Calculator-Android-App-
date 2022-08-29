@@ -8,6 +8,7 @@
     <string name="label_age_group">Age Group</string>
     <string name="label_height">Height (CM)</string>
     <string name="label_weight">Weight (KG)</string>
+    <string name="submit">Submit</string>
     <string-array name="age_group_array">
         <item>0 to 6</item>
         <item>7 to 12</item>

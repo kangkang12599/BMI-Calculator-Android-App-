@@ -117,6 +117,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/wide_margin"
             android:layout_marginEnd="@dimen/wide_margin"
-            android:text="Button"/>
+            android:text="@string/submit" />
     </LinearLayout>
 </layout>
