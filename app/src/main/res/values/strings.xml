@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_gender">Gender</string>
+    <string name="male">M</string>
+    <string name="female">F</string>
+    <string name="label_age_group">Age Group</string>
+    <string name="label_height">Height (CM)</string>
+    <string name="label_weight">Weight (KG)</string>
+    <string-array name="age_group_array">
+        <item>0 to 6</item>
+        <item>7 to 12</item>
+        <item>13 to 17</item>
+        <item>18 to 20</item>
+        <item>21 to 29</item>
+        <item>30 to 39</item>
+        <item>40 to 59</item>
+        <item>60 and above</item>
+    </string-array>
+</resources>

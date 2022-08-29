@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HealthFormFragment">
+    <LinearLayout
+        android:id="@+id/healthFormLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/super_wide_margin"
+            android:text="Calculate Your BMI"
+            android:textSize="24sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/labelGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_gender"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            style="@style/form_label_style"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/wide_margin">
+
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="0dp"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:minHeight="0dp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/label_age_group"
+            style="@style/form_label_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:text="@string/label_age_group" />
+
+        <Spinner
+            android:id="@+id/spinnerAgeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:layout_marginBottom="@dimen/wide_margin"/>
+
+        <TextView
+            android:id="@+id/labelHeight"
+            style="@style/form_label_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:text="@string/label_height"
+            android:layout_marginBottom="@dimen/small_margin"/>
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="@dimen/wide_margin"/>
+
+        <TextView
+            android:id="@+id/labelWeight"
+            style="@style/form_label_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:text="@string/label_weight"
+            android:layout_marginBottom="@dimen/small_margin"/>
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="@dimen/wide_margin"/>
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wide_margin"
+            android:layout_marginEnd="@dimen/wide_margin"
+            android:text="Button"/>
+    </LinearLayout>
+</layout>
